@@ -8,7 +8,7 @@ confinement: strict
 
 apps:
   joplin: 
-    command: joplin
+    command: $SNAP/.joplin-bin
     plugs:
       - home
       - network
