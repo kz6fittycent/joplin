@@ -1,1 +1,25 @@
+name: joplin
+version: 1.0+git
+summary: Joplin is a free, open source note taking and to-do application
+description: |
+  Joplin is a free, open source note taking and to-do application, which can handle a large number of notes organised into notebooks. The notes are searchable, can be copied, tagged and modified either from the applications directly or from your own text editor. The notes are in Markdown format.
+grade: stable
+confinement: strict
+
+apps:
+  joplin: 
+    command: joplin
+    plugs:
+      - home
+      - network
+      - network-bind
+
+parts:
+  joplin:
+    source: https://github.com/kz6fittycent/joplin
+    source-type: git
+    plugin: nodejs
+    node-package-manager: npm
+    npm-run: 
+      - build
 
