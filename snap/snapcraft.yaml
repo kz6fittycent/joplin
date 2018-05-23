@@ -20,6 +20,3 @@ parts:
     source-type: git
     plugin: nodejs
     node-package-manager: npm
-    npm-run: 
-      - install
-
